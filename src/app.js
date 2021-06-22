@@ -4,14 +4,10 @@ const cors = require("cors");
 const app = express();
 const moviesRouter = require("./movies/movies.router");
 
-console.log("This is the server going!!")
-
-app.use(cors);
+app.use(cors());
 app.use(express.json());
 
-app.get("/movies", (req, res) => {
-    console.log(">>>>>>>>>>>>>>>>>>>>>>>> SOMETHING HERE!!")
-});
+app.use("/movies", moviesRouter);
 
 app.use((req, res, next) => {
     next({ status: 404, message: `Not Found: ${req.originalUrl}`}

@@ -1,19 +1,19 @@
-const router = require("express").Router();
+const router = require("express").Router({mergeParams : true});
 const controller = require("./movies.controller");
 const methodNotAllowed = require("../errors/methodNotAllowed");
-
-console.log("+++++++++++++++++++ controller", controller.list)
+const { Router } = require("express");
 
 router
     .route("/")
-    .get((req, res) => {
-        console.log(">>>>>>>>>>>>>>>>>>>>>>>> SOMETHING HERE!!")
-    })
+    .get(controller.list)
     .all(methodNotAllowed);
 
-// router
-//     .route("/movies?is_showing=true")
-//     .get(controller.list)
-//     .all(methodNotAllowed);
+// `GET /movies/:movieId`
+
+Router
+    .route("/movies/:movieId")
+    .get(controller.read)
+    .all(methodNotAllowed);
+
 
 module.exports = router;
