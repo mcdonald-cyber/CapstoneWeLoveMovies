@@ -7,12 +7,12 @@ The was created in a group effort with fellow cohort members.
 Languages used in creation were Javascript, Node, Express and Postgres. 
 
 The project focused on being able to:
-*Running tests from the command line
-*Using common middleware packages
-*Receiving requests through routes
-*Accessing relevant information through route parameters
-*Building an API following RESTful design principles
-*Writing custom middleware functions
+* Running tests from the command line
+* Using common middleware packages
+* Receiving requests through routes
+* Accessing relevant information through route parameters
+* Building an API following RESTful design principles
+* Writing custom middleware functions
 
 ## Website
 The Application has not been deployed yet.
