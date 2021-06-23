@@ -1,8 +1,10 @@
 const router = require("express").Router({ mergeParams: true });
+const theatersRouter = require("../theaters/theaters.router");
 const controller = require("./movies.controller");
 const methodNotAllowed = require("../errors/methodNotAllowed");
-// const { route } = require("../app");
 
+
+router.use(`/:movieId/theaters`, theatersRouter)
 
 router
     .route("/")
@@ -13,10 +15,7 @@ router
     .route("/:movieId")
         .get(controller.read);
 
-/// ### GET /movies/:movieId/theaters
-// router
-//     .route("/:movieId/theaters")
-//     .get(controller.listMovieIdTheaters);
+
     
 
 

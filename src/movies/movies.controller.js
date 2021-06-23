@@ -25,11 +25,7 @@ async function read(req, res) {
       res.json({data: res.locals.movie});
 }
 
-// async function listMovieIdTheaters(req, res, next) {
-//   const { movieId } = req.params
-//   const data = await service.listMovieIdTheaters(movieId)
-//   res.json({data})
-// }
+
 module.exports = {
   list: asyncErrorBoundary(list),
   read: [asyncErrorBoundary(movieExist), read]
