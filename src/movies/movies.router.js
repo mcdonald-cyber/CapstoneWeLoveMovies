@@ -1,19 +1,23 @@
-const router = require("express").Router({mergeParams : true});
+const router = require("express").Router({ mergeParams: true });
 const controller = require("./movies.controller");
 const methodNotAllowed = require("../errors/methodNotAllowed");
-const { Router } = require("express");
+// const { route } = require("../app");
+
 
 router
     .route("/")
-    .get(controller.list)
-    .all(methodNotAllowed);
+        .get(controller.list)
+        .all(methodNotAllowed);
 
-// `GET /movies/:movieId`
+router
+    .route("/:movieId")
+        .get(controller.read);
 
-Router
-    .route("/movies/:movieId")
-    .get(controller.read)
-    .all(methodNotAllowed);
+/// ### GET /movies/:movieId/theaters
+// router
+//     .route("/:movieId/theaters")
+//     .get(controller.listMovieIdTheaters);
+    
 
 
 module.exports = router;

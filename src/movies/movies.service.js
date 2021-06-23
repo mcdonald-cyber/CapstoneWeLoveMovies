@@ -21,6 +21,14 @@ function list(isShowing) {
       return knex(`movies`)
       .select("*")
       .where({"movie_id" : movieId})
+      .then((moot) => moot[0]);
   }
+
+  // function listMovieIdTheaters(movieId) {
+  //   return knex(`theaters as t`)
+  //   .select("*")
+  //   .join("movies as m", "m.movie_id", "t.movie_id")
+  //   .where({"m.movie_id" : movieId})
+  // }
 
 module.exports = { list, read };
