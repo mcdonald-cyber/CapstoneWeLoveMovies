@@ -1,5 +1,5 @@
 const service = require("./theaters.service");
-const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
+const asyncErrorBoundary = require("../Errors/asyncErrorBoundary");
 const reduceProperties = require("../utils/reduce-properties");
 
 const reduceTheaterAndMovies = reduceProperties("theater_id", {
