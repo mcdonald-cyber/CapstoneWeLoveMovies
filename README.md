@@ -6,13 +6,24 @@ This is a project was produced under the guidiance of my courses with [Thinkful]
 The was created in a group effort with fellow cohort members.
 Languages used in creation were Javascript, Node, Express and Postgres. 
 
-The project focused on being able to:
+The project focused:
 * Running tests from the command line
 * Using common middleware packages
 * Receiving requests through routes
 * Accessing relevant information through route parameters
 * Building an API following RESTful design principles
 * Writing custom middleware functions
+
+# WeLoveMovies Frontend Application
+
+This is the Front End Application for the WeLoveMovies project. Found in the Client file.
+
+## Installation
+
+1. Fork / clone this repository.
+1. Run `npm install`.
+
+Use `npm start` to run the application. If you deploy this application, create a `.env.production` file similar to the `.env.development` file.
 
 ## Website
 The Application has not been deployed yet.
